@@ -9,6 +9,6 @@ package basic01;
  *
  * @author son maithanh
  */
-public class lesson2 {
+public class btvn2lesson2 {
     
 }
