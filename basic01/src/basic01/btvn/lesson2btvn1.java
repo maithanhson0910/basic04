@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package basic01;
+package basic01.btvn;
 
 import java.util.Scanner;
 
@@ -11,10 +11,10 @@ import java.util.Scanner;
  *
  * @author son maithanh
  */
-public class lesson2 {
+public class lesson2btvn1 {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         System.out.println("nhap so thu 1: ");
         int s1 = input.nextInt();
 
@@ -119,6 +119,21 @@ public class lesson2 {
             s8 = s10;
             s10 = temp;
             System.out.println("so be nhat: " + s10);
+        }
+        */
+        Scanner sc = new Scanner(System.in);
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i =0; i<=10; i++){
+            System.out.println("input; ");
+            int temp
+            temp = sc.nextInt();
+            if(temp>max){
+                max=temp;
+            }
+            if(temp<min){
+                min=temp;
+            }
         }
     }
 }
