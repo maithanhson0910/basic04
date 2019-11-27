@@ -19,8 +19,8 @@ public class lesson3btvn2 {
         System.out.println("nhap do dai mang: ");
         int v = sc.nextInt();
         int[] a = new int[v];
-        System.out.println("nhap 10 so nguyen duong: ");
-        for (int i = 0; i < 10; i++) {
+        System.out.println("nhap so nguyen duong: ");
+        for (int i = 0; i < v; i++) {
 
             while (true) {
                 System.out.println("so thu " + (i + 1) + ": ");
@@ -75,7 +75,7 @@ public class lesson3btvn2 {
             }
         }
         //Nhập vào 1 số tự nhiên x , in ra phần tử có giá trị gần với giá trị của x nhất ở trong mảng
-        System.out.println("nhap so tu nhien x1: ");
+        /*System.out.println("nhap so tu nhien x1: ");
         int x1 = sc.nextInt();
         for (int i = 0; i < 10; i++) {
             int min1 = Integer.MAX_VALUE;
@@ -92,9 +92,30 @@ public class lesson3btvn2 {
 
                 }
             }
+        }*/
+        System.out.println("nhap vao x: ");
+        int input = sc.nextInt();
+        int minSub = Math.abs(a[0]-input);
+        for (int i =0; i<input;i++){
+            int temp = Math.abs(a[i]-input);
+            if(temp<minSub){
+                minSub=temp;
+            }
         }
+        
+        
         //Kiểm tra sự đối xứng của mảng , vd: 1 2 3 2 1 là 1 mảng đối xứng
-        for (int i = 2; i < 10; i++) {
+        boolean check = true;
+        for ( int i = 0; i< (a.length/2); i++){
+            if(a[i]!=a[a.length -1-i]){
+                check=false;
+            }
+        }
+        if (check ){
+            System.out.println("mang doi xung");
+        }else System.out.println("mang khong doi xung");
+        
+        /*for (int i = 0; i < ; i++) {
             if (a[i - 1] == a[i + 1]) {
                 if (a[i - 2] == a[i + 2]) {
                     System.out.println("mang doi xung");
@@ -104,6 +125,6 @@ public class lesson3btvn2 {
             } else {
                 System.out.println("mang khong doi xung");
             }
-        }
+        }*/
     }
 }
