@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author son maithanh
  */
-public class NewClass {
+public class bai4 {
 
     public static void main(String[] args) {
 
