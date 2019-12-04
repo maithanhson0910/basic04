@@ -15,24 +15,24 @@ public class lesson5 {
 
     static Scanner sc = new Scanner(System.in);
     static int X, Y, ENDX, ENDY;
-    static char[][] MAP = new char[5][5];
+    static char[][] MAP = new char[10][10];
     static int count = 0;
 
     public static void main(String[] args) {
         X = 2;
         Y = 2;
-        ENDX = (int) (Math.random() * 5);
-        ENDY = (int) (Math.random() * 5);
+        ENDX = (int) (Math.random() * 10);
+        ENDY = (int) (Math.random() * 10);
         while (true) {
             if (ENDX == X && ENDY == Y) {
-                ENDX = (int) (Math.random() * 5);
-                ENDY = (int) (Math.random() * 5);
+                ENDX = (int) (Math.random() * 10);
+                ENDY = (int) (Math.random() * 10);
             } else {
                 break;
             }
         }
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
                 if (i == X && j == Y) {
                     MAP[i][j] = 'X';
                 } else if (i == ENDX && j == ENDY) {
@@ -63,8 +63,8 @@ public class lesson5 {
 
     private static void hienThiMap() {
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
                 System.out.print(MAP[i][j] + " ");
 
             }
@@ -87,7 +87,7 @@ public class lesson5 {
                 MAP[X][Y] = '-';
                 X = X - 1;
                 if (X == -1) {
-                    X = 4;
+                    X = 9;
                 }
                 MAP[X][Y] = 'X';
                 count++;
@@ -96,7 +96,7 @@ public class lesson5 {
                 MAP[X][Y] = '-';
                 Y = Y - 1;
                 if (Y == -1) {
-                    Y = 4;
+                    Y = 9;
                 }
                 MAP[X][Y] = 'X';
                 count++;
@@ -104,7 +104,7 @@ public class lesson5 {
             case 's':
                 MAP[X][Y] = '-';
                 X = X + 1;
-                if (X == 5) {
+                if (X == 10) {
                     X = 0;
                 }
                 MAP[X][Y] = 'X';
@@ -113,7 +113,7 @@ public class lesson5 {
             case 'd':
                 MAP[X][Y] = '-';
                 Y = Y + 1;
-                if (Y == 5) {
+                if (Y == 10) {
                     Y = 0;
                 }
                 MAP[X][Y] = 'X';

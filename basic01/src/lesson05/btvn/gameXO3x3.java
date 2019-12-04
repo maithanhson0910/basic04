@@ -17,6 +17,7 @@ public class gameXO3x3 {
     static Scanner sc = new Scanner(System.in);
     static char[][] MAP = new char[3][3];
     static int count = 0;
+
     public static void main(String[] args) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -33,7 +34,7 @@ public class gameXO3x3 {
                 break;
             }
             count++;
-            if(count == 9){
+            if (count == 9) {
                 System.out.println("hoa");
                 break;
             }
@@ -44,9 +45,9 @@ public class gameXO3x3 {
                 break;
             }
             count++;
-            
+
         }
-        
+
     }
 
     public static void hienThiMap() {
@@ -119,69 +120,36 @@ public class gameXO3x3 {
 
     public static boolean kiemTraThang() {
         boolean check = false;
-        if (MAP[0][0] == MAP[0][1] && MAP[0][0] == MAP[0][2] && MAP[0][0] == 'X') {
-            System.out.println(MAP[0][0] + " thang");
-            check = true;
+//        for (int i = 0; i < 3; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                if (MAP[i][0] == MAP[i][1] && MAP[i][0] == MAP[i][2] && (MAP[i][0] == 'X'||MAP[i][0]=='O')) {
+//                    System.out.println(MAP[i][0] + " thang");
+//                    check = true;
+//                }
+//                if (MAP[0][j] == MAP[1][j] && MAP[0][j] == MAP[2][j] && (MAP[0][j] == 'X'||MAP[0][j]=='O')) {
+//                    System.out.println(MAP[0][j] + " thang");
+//                    check = true;
+//                }
+//                
+//            }
+//        }
+//        if (MAP[0][0] == MAP[1][1] && MAP[0][0] == MAP[2][2] && (MAP[0][0] == 'O'||MAP[0][0] == 'X')) {
+//            System.out.println(MAP[0][0] + " thang");
+//            check = true;
+//        }
+//        if (MAP[0][2] == MAP[1][1] && MAP[2][0] == MAP[1][1] && (MAP[0][2] == 'O'||MAP[0][2] == 'O')) {
+//            System.out.println(MAP[0][2] + " thang");
+//            check = true;
+//        }
+        
+        int[][] a = new int[3][3];
+        for(int i = 0; i<3;i++){
+            for(int j=0;j<3;j++){
+                a[i][j]=MAP[i][j];
+            }
         }
-        if (MAP[1][0] == MAP[1][1] && MAP[1][0] == MAP[1][2] && MAP[1][0] == 'X') {
-            System.out.println(MAP[1][0] + " thang");
-            check = true;
-        }
-        if (MAP[2][0] == MAP[2][1] && MAP[2][0] == MAP[2][2] && MAP[2][0] == 'X') {
-            System.out.println(MAP[2][0] + " thang");
-            check = true;
-        }
-        if (MAP[0][0] == MAP[1][0] && MAP[0][0] == MAP[2][0] && MAP[0][0] == 'X') {
-            System.out.println(MAP[0][0] + " thang");
-            check = true;
-        }
-        if (MAP[0][1] == MAP[1][1] && MAP[0][1] == MAP[2][1] && MAP[0][1] == 'X') {
-            System.out.println(MAP[0][1] + " thang");
-            check = true;
-        }
-        if (MAP[0][2] == MAP[1][2] && MAP[0][2] == MAP[2][2] && MAP[0][2] == 'X') {
-            System.out.println(MAP[0][2] + " thang");
-            check = true;
-        }
-        if (MAP[0][0] == MAP[1][1] && MAP[0][0] == MAP[2][2] && MAP[0][0] == 'X') {
-            System.out.println(MAP[0][0] + " thang");
-            check = true;
-        }
-        if (MAP[0][2] == MAP[1][1] && MAP[0][2] == MAP[2][0] && MAP[0][2] == 'X') {
-            System.out.println(MAP[0][2] + " thang");
-            check = true;
-        }
-        if (MAP[0][0] == MAP[0][1] && MAP[0][0] == MAP[0][2] && MAP[0][0] == 'O') {
-            System.out.println(MAP[0][0] + " thang");
-            check = true;
-        }
-        if (MAP[1][0] == MAP[1][1] && MAP[1][0] == MAP[1][2] && MAP[1][0] == 'O') {
-            System.out.println(MAP[1][0] + " thang");
-            check = true;
-        }
-        if (MAP[2][0] == MAP[2][1] && MAP[2][0] == MAP[2][2] && MAP[2][0] == 'O') {
-            System.out.println(MAP[2][0] + " thang");
-            check = true;
-        }
-        if (MAP[0][0] == MAP[1][0] && MAP[0][0] == MAP[2][0] && MAP[0][0] == 'O') {
-            System.out.println(MAP[0][0] + " thang");
-            check = true;
-        }
-        if (MAP[0][1] == MAP[1][1] && MAP[0][1] == MAP[2][1] && MAP[0][1] == 'O') {
-            System.out.println(MAP[0][1] + " thang");
-            check = true;
-        }
-        if (MAP[0][2] == MAP[1][2] && MAP[0][2] == MAP[2][2] && MAP[0][2] == 'O') {
-            System.out.println(MAP[0][2] + " thang");
-            check = true;
-        }
-        if (MAP[0][0] == MAP[1][1] && MAP[0][0] == MAP[2][2] && MAP[0][0] == 'O') {
-            System.out.println(MAP[0][0] + " thang");
-            check = true;
-        }
-        if (MAP[0][2] == MAP[1][1] && MAP[0][2] == MAP[2][0] && MAP[0][2] == 'O') {
-            System.out.println(MAP[0][2] + " thang");
-            check = true;
+        switch(){
+            
         }
         return check;
 
