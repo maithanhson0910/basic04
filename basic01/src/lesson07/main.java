@@ -15,7 +15,7 @@ public class main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int temp = 0;
+        
         String[] value = new String[2];
         value[0] = "";
         value[1] = "";
@@ -27,6 +27,7 @@ public class main {
                 break;
             } else {
                 for (int i = 0; i < input.length(); i++) {
+                    int temp = 0;
                     if (input.charAt(i) == '/') {
                         temp++;
                         continue;
